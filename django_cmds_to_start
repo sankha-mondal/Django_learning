@@ -27,8 +27,8 @@ Create a project:
 ----------------
 
 Step 1:
->> django-admin startproject firstProject
->> django-admin startproject productTemplate
+>> django-admin startproject <firstProject>
+>> django-admin startproject productSYS
 
 Step 2:
 >> cd <projectName>
@@ -42,7 +42,7 @@ To change the port running port number:
 
 Step 4:
 Create a Django App:
->> python manage.py startapp firstApp
+>> python manage.py startapp <firstApp>
 
 Create a virtual environment:
 ----------------------------
