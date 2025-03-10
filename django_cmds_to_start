@@ -82,3 +82,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> from django.db import connection
 >>> c = connection.cursor()
 >>> ### Connection successfull [proved]         
+
+## To make Migration:
+---------------------
+(venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py makemigrations
+Migrations for 'empApp':
+  empApp\migrations\0001_initial.py
+    + Create model Employee
