@@ -1,12 +1,12 @@
 ## Download Django:
----------------
+-------------------
 >> pip install django
 >> python -m django --version
 >> python -m pip install Django
 
 
 ## If faced issue: 'django-admin' is not recognized as an internal or external command, operable program or batch file.
---------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 Working :If you are using window then first of all
 
 create virtual environment
@@ -23,7 +23,7 @@ Then create django project named mysite
 
 
 ## Create a project:
-----------------
+-------------------
 
 Step 1:
 >> django-admin startproject <firstProject>
@@ -44,7 +44,7 @@ Create a Django App:
 >> python manage.py startapp <firstApp>
 
 ## Create a virtual environment:
-----------------------------
+-------------------------------
 
 >> pip3 install virtualenv
 
@@ -73,7 +73,7 @@ Create a Django App:
 >> rm -rf venv
 
 ## Validate the connection with Database:
---------------------------------------
+-----------------------------------------
 (venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py shell
 Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
@@ -97,6 +97,7 @@ Migrations for 'empApp':
 CREATE TABLE `empApp_employee` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `firstName` varchar(30) NOT NULL, `lastName` varchar(30) NOT NULL, `salary` double precision NOT NULL, `email` varchar(30) NOT NULL);      
 
 ## To migrate with Database:
+----------------------------
 (venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, empApp, sessions
@@ -134,3 +135,5 @@ django_admin_log
 django_content_type
 django_migrations
 
+## Issue List & Sollution:
+--------------------------
