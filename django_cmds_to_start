@@ -135,5 +135,16 @@ django_admin_log
 django_content_type
 django_migrations
 
-## Issue List & Sollution:
+## Issue List & Solution:
 --------------------------
+🐞 Issue 1. Error loading MySQLdb Module 'Did you install mysqlclient or MySQL-python?' 🐞
+✔️ Solution: 
+pip install pymysql
+Then, edit the __init__.py file in your project origin dir(the same as settings.py)
+add:
+import pymysql
+pymysql.install_as_MySQLdb()
+
+🐞 Issue 2. "cryptography is required for sha256_password or caching_sha2_password" 🐞
+✔️ Solution: 
+If you just want to fix this RuntimeError, <pip install cryptography> is enough and check your MySQL passwd.
