@@ -135,8 +135,8 @@ django_admin_log
 django_content_type
 django_migrations
 
-## Create Superuser OR admin:
------------------------------
+## Create Superuser OR admin with passwd:
+-----------------------------------------
 >> python manage.py createsuperuser
 Username (leave blank to use 'sankmond'): admin
 Email address: <stay blank>
