@@ -22,7 +22,6 @@ Then create django project named mysite
 >> django-admin startproject mysite
 
 
-
 ## Create a project:
 ----------------
 
