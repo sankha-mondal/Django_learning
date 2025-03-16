@@ -135,6 +135,24 @@ django_admin_log
 django_content_type
 django_migrations
 
+## Create Superuser OR admin:
+-----------------------------
+>> python manage.py createsuperuser
+Username (leave blank to use 'sankmond'): admin
+Email address: <stay blank>
+Password: ******
+Password (again): ******
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+
+
+
+
+
+
+
+
 ## Issue List & Solution:
 --------------------------
 🐞 Issue 1. Error loading MySQLdb Module 'Did you install mysqlclient or MySQL-python?' 🐞
