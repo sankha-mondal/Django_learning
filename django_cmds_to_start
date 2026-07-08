@@ -74,7 +74,8 @@ Create a Django App:
 
 ## Validate the connection with Database:
 -----------------------------------------
-(venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py shell
+(venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py shell
+
 Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 (InteractiveConsole)
@@ -84,13 +85,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## To make Migration:
 ---------------------
-(venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py makemigrations
+(venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py makemigrations
 Migrations for 'empApp':
   empApp\migrations\0001_initial.py
     + Create model Employee
 
 ## To see the SQL query:
-(venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py sqlmigrate empApp 0001
+(venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py sqlmigrate empApp 0001
 --
 -- Create model Employee
 --
@@ -98,7 +99,7 @@ CREATE TABLE `empApp_employee` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY,
 
 ## To migrate with Database:
 ----------------------------
-(venv) C:\Users\sankmond\OneDrive - Cisco\Desktop\Workspace\Python_workspace\Django_Projects\EmployeeManagementSYS>python manage.py migrate
+(venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, empApp, sessions
 Running migrations:
