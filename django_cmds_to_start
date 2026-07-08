@@ -43,34 +43,40 @@ Step 4:
 Create a Django App:
 >> python manage.py startapp <firstApp>
 
+
 ## Create a virtual environment:
 -------------------------------
 
 >> pip3 install virtualenv
-
 >> which virtualenv
-
 >> python3 -m venv env
-
 >> source env/bin/activate
-
 >> which python3
-
 >> pip3 install Django
-
 >> pip3 install mysqlclient
-
 >> env/bin/django-admin.py startproject <projectname>
-
 >> python3 manage.py migrate
-
 >> python3 manage.py runserver
-
 >> django
-
 >> deactivate
-
 >> rm -rf venv
+
+
+## Connection with MySQL DB:
+----------------------------
+>> pip install pymysql
+
+# In settings.py -
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'student_dj_db',
+        'USER': 'root',
+        'PASSWORD': '***',
+    }
+}
+
 
 ## Validate the connection with Database:
 -----------------------------------------
@@ -83,6 +89,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> c = connection.cursor()
 >>> ### Connection successfull [proved]         
 
+
 ## To make Migration:
 ---------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py makemigrations
@@ -90,12 +97,15 @@ Migrations for 'empApp':
   empApp\migrations\0001_initial.py
     + Create model Employee
 
+
 ## To see the SQL query:
+------------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py sqlmigrate empApp 0001
 --
 -- Create model Employee
 --
 CREATE TABLE `empApp_employee` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `firstName` varchar(30) NOT NULL, `lastName` varchar(30) NOT NULL, `salary` double precision NOT NULL, `email` varchar(30) NOT NULL);      
+
 
 ## To migrate with Database:
 ----------------------------
@@ -123,6 +133,7 @@ Running migrations:
   Applying empApp.0001_initial... OK
   Applying sessions.0001_initial... OK
 
+
 Go to MySQL workBench:
 ----------------------
 >> show tables;
@@ -135,6 +146,7 @@ auth_user_user_permissions
 django_admin_log
 django_content_type
 django_migrations
+
 
 ## Create Superuser OR admin with passwd:
 -----------------------------------------
