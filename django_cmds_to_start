@@ -170,7 +170,7 @@ Superuser created successfully.
 --------------------------
 🐞 Issue 1. Error loading MySQLdb Module 'Did you install mysqlclient or MySQL-python?' 🐞
 ✔️ Solution: 
-pip install pymysql
+>> pip install pymysql
 Then, edit the __init__.py file in your project origin dir(the same as settings.py)
 add:
 import pymysql
@@ -186,7 +186,7 @@ If you just want to fix this RuntimeError, <pip install cryptography> is enough 
                 "Error loading MySQLdb module.\nDid you install mysqlclient?"
                 ) from err
             django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
-        Did you install mysqlclient?
+            Did you install mysqlclient?
 ```
 ✔️ Solution: 
 >> pip install mysqlclient
