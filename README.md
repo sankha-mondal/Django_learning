@@ -103,8 +103,9 @@ In settings.py -
     
     python manage.py makemigrations
 Migrations for 'empApp':
-    empApp\migrations\0001_initial.py
-      + Create model Employee
+
+empApp\migrations\0001_initial.py   
+  + Create model Employee
 
 ## 🌐 To see the SQL query:
 -----------------------------
