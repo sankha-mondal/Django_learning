@@ -1,11 +1,11 @@
-## Download Django:
--------------------
+## 🌐 Download Django:
+-----------------------
     pip install django
     python -m django --version
     python -m pip install Django
 
-## If faced issue: 'django-admin' is not recognized as an internal or external command, operable program or batch file.
------------------------------------------------------------------------------------------------------------------------
+## 🌐 If faced issue: 'django-admin' is not recognized as an internal or external command, operable program or batch file.
+---------------------------------------------------------------------------------------------------------------------------
 Working :If you are using window then first of all
 
 create a virtual environment:
@@ -24,8 +24,8 @@ Then create django project named mysite:
 
     django-admin startproject <mysite_project>
 
-## Create a project:
--------------------
+## 🌐 Create a project:
+------------------------
 
 Step 1:
         
@@ -51,7 +51,7 @@ Create a Django App:
 
     python manage.py startapp <firstApp>
 
-## Create a virtual environment:
+## 🌐 Create a virtual environment:
 -------------------------------
 
     >> pip3 install virtualenv
@@ -68,8 +68,8 @@ Create a Django App:
     >> deactivate
     >> rm -rf venv
 
-## Connection with MySQL DB:
-----------------------------
+## 🌐 Connection with MySQL DB:
+--------------------------------
 
     pip install pymysql
 
@@ -84,8 +84,8 @@ In settings.py -
         }
     }
 
-## Validate the connection with Database:
------------------------------------------
+## 🌐 Validate the connection with the database:
+-------------------------------------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> 
     
     python manage.py shell
@@ -97,8 +97,8 @@ In settings.py -
     >>> c = connection.cursor()
     >>> ### Connection successfull [proved]         
 
-## To make Migration:
----------------------
+## 🌐 To make Migration:
+--------------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> 
     
     python manage.py makemigrations
@@ -106,8 +106,8 @@ Migrations for 'empApp':
     empApp\migrations\0001_initial.py
       + Create model Employee
 
-## To see the SQL query:
-------------------------
+## 🌐 To see the SQL query:
+-----------------------------
 
     (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> python manage.py sqlmigrate empApp 0001
     --
@@ -115,7 +115,7 @@ Migrations for 'empApp':
     --
     CREATE TABLE `empApp_employee` (`id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `firstName` varchar(30) NOT NULL, `lastName` varchar(30) NOT NULL, `salary` double precision NOT NULL, `email` varchar(30) NOT NULL);      
 
-## To migrate with Database:
+## 🌐 To migrate with Database:
 ----------------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> 
 
@@ -144,8 +144,8 @@ Running migrations:
   Applying sessions.0001_initial... OK
 
 
-Go to MySQL workBench:
-----------------------
+## 🌐 Go to MySQL workBench:
+----------------------------
    
        show tables;
 auth_group
@@ -158,8 +158,8 @@ django_admin_log
 django_content_type
 django_migrations
 
-## Create Superuser OR admin with passwd:
------------------------------------------
+## 🌐 Create Superuser OR admin with passwd:
+---------------------------------------------
 
     python manage.py createsuperuser
     
@@ -168,10 +168,50 @@ Username (leave blank to use 'sankmond'): admin
 Email address: <stay blank>
 
 Password: ******
-
 Password (again): ******
 
 Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.
     
     http://localhost:8000/admin/
+
+
+
+
+
+
+
+
+
+
+## 🌐 Issue List & Solution:
+------------------------------
+🐞 Issue 1. Error loading MySQLdb Module 'Did you install mysqlclient or MySQL-python?' 🐞
+✔️ Solution: 
+
+    pip install pymysql
+Then, edit the __init__.py file in your project origin dir(the same as settings.py)
+add:
+    
+    import pymysql
+    pymysql.install_as_MySQLdb()
+
+🐞 Issue 2. "cryptography is required for sha256_password or caching_sha2_password" 🐞
+✔️ Solution: 
+If you just want to fix this RuntimeError, <pip install cryptography> is enough, and check your MySQL passwd.
+
+🐞 Issue 3. Error occurred in the 2nd time runserver 🐞
+```
+            raise ImproperlyConfigured(
+                "Error loading MySQLdb module.\nDid you install mysqlclient?"
+                ) from err
+            django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+            Did you install mysqlclient?
+```
+✔️ Solution: 
+
+    pip install mysqlclient
+    
+    python manage.py runserver
+
+
