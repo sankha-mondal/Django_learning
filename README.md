@@ -159,6 +159,11 @@ Running migrations:
   Applying empApp.0001_initial... OK
   Applying sessions.0001_initial... OK
 
+  In MySQL:
+
+      use DATABAES;
+      show tables;
+
 
 ## 🌐 Go to MySQL workBench:
 ----------------------------
