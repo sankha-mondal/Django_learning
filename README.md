@@ -184,9 +184,10 @@ Superuser created successfully.
 
 
 
-## 🌐 Issue List & Solution:
+## 🐞 Issue List & Solution:
 ------------------------------
 🐞 Issue 1. Error loading MySQLdb Module 'Did you install mysqlclient or MySQL-python?' 🐞
+
 ✔️ Solution: 
 
     pip install pymysql
@@ -197,16 +198,17 @@ add:
     pymysql.install_as_MySQLdb()
 
 🐞 Issue 2. "cryptography is required for sha256_password or caching_sha2_password" 🐞
+
 ✔️ Solution: 
 If you just want to fix this RuntimeError, <pip install cryptography> is enough, and check your MySQL passwd.
 
 🐞 Issue 3. Error occurred in the 2nd time runserver 🐞
 ```
-            raise ImproperlyConfigured(
-                "Error loading MySQLdb module.\nDid you install mysqlclient?"
-                ) from err
-            django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
-            Did you install mysqlclient?
+    raise ImproperlyConfigured(
+        "Error loading MySQLdb module.\nDid you install mysqlclient?"
+        ) from err
+        django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+        Did you install mysqlclient?
 ```
 ✔️ Solution: 
 
