@@ -103,14 +103,14 @@ In settings.py -
 -------------------------------------------------
 (venv) C:\Users\...\Python_workspace\Django_Projects\EmployeeManagementSYS> 
     
-    python manage.py shell
-
+    >> python manage.py shell
+    
     Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     (InteractiveConsole)
     >>> from django.db import connection
     >>> c = connection.cursor()
-    >>> ### Connection successfull [proved]         
+    >>> ### Connection successful [proved]         
 
 ## 🌐 To make Migration:
 --------------------------
