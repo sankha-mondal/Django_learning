@@ -24,6 +24,13 @@ Then create django project named mysite:
 
     django-admin startproject <mysite_project>
 
+Then in settings.py
+
+    INSTALLED_APPS = [
+    ...
+    'YOUR_App',
+    ]
+
 ## 🌐 Create a project:
 ------------------------
 
