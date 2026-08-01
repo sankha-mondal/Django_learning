@@ -27,8 +27,8 @@ Then create django project named mysite:
 Then in settings.py add:
 
     INSTALLED_APPS = [
-    ...
-    'YOUR_App',
+        ...
+        'YOUR_App',
     ]
 
 ## 🌐 Create a project:
@@ -62,8 +62,8 @@ Step 5:
 Then in settings.py add:
 
     INSTALLED_APPS = [
-    ...
-    'YOUR_App',
+        ...
+        'YOUR_App',
     ]
 
 ## 🌐 Create a virtual environment:
