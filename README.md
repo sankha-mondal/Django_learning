@@ -20,12 +20,13 @@ Then install Django in that environment:
     
     pip install Django
 
-Then create django project named mysite:
+Then create django project named mysite_project:
 
     django-admin startproject <mysite_project>
 
 Then create a Django App:
 
+    cd <mysite_project>
     python manage.py startapp <YOUR_App>
 
 Then in settings.py add:
