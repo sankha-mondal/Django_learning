@@ -24,6 +24,10 @@ Then create django project named mysite:
 
     django-admin startproject <mysite_project>
 
+Then create a Django App:
+
+    python manage.py startapp <YOUR_App>
+
 Then in settings.py add:
 
     INSTALLED_APPS = [
@@ -56,7 +60,7 @@ To change the port number:
 Step 4:
 Create a Django App:
 
-    python manage.py startapp <firstApp>
+    python manage.py startapp <YOUR_App>
 
 Step 5:
 Then in settings.py add:
