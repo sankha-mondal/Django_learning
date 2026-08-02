@@ -184,6 +184,18 @@ django_admin_log
 django_content_type
 django_migrations
 
+## 🌐 TEMPLATES DIR setup:
+--------------------------
+In settings.py;
+
+    import os
+    TEMPLATES = [
+        {    ...
+            'DIRS': [os.path.join(BASE_DIR, 'templates')],
+             ...
+        }
+    }
+
 ## 🌐 Create Superuser OR admin with passwd:
 ---------------------------------------------
 
